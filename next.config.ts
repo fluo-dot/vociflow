@@ -3,12 +3,9 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export', 
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Da GitHub Pages meist unter /vociflow/ läuft, muss der Pfad angepasst werden
+  // Falls du eine eigene Domain nutzt, kannst du basePath entfernen
+  basePath: '/vociflow',
   images: {
     unoptimized: true,
     remotePatterns: [
