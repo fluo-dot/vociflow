@@ -1,0 +1,50 @@
+
+{
+  "entities": {
+    "Deck": {
+      "title": "Vokabelheft",
+      "description": "Eine lokale Sammlung von Vokabelkarten.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "languageFront": { "type": "string" },
+        "languageBack": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/backend/entities/Card"
+          }
+        }
+      }
+    },
+    "Card": {
+      "title": "Vokabelkarte",
+      "description": "Eine einzelne Vokabel.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "front": { "type": "string" },
+        "back": { "type": "string" },
+        "known": { "type": "boolean" },
+        "lastScore": { "type": "number" }
+      }
+    },
+    "Folder": {
+      "title": "Ordner",
+      "description": "Eine lokale Gruppe von Vokabelheften.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "deckIds": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "number" }
+      }
+    }
+  },
+  "auth": {
+    "providers": []
+  },
+  "firestore": {}
+}
