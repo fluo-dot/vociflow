@@ -9,24 +9,9 @@ Da VociFlow ein Next.js-Projekt ist, wird die statische Seite beim Build-Vorgang
 
 1. Führe im Terminal `npm run build` aus.
 2. Next.js erstellt einen Ordner namens `out`.
-3. Der Inhalt dieses `out`-Ordners (inklusive der generierten `index.html`) muss in den `gh-pages` Branch deines GitHub-Repositorys hochgeladen werden.
+3. Der Inhalt dieses `out`-Ordners (inklusive der generierten `index.html`) muss in den Haupt-Zweig deines Repositorys (oder einen speziellen `gh-pages` Branch) hochgeladen werden, damit GitHub Pages sie erkennt.
 
-## 🛠 Neues Repository verknüpfen
-
-Wenn du ein neues Repository erstellt hast, kannst du es mit diesen Befehlen verknüpfen:
-
-```bash
-# Falls noch ein alter Remote existiert:
-git remote remove origin
-
-# Neues Repository hinzufügen:
-git remote add origin https://github.com/DEIN_NUTZERNAME/DEIN_NEUES_REPO.git
-
-# Änderungen hochladen:
-git add .
-git commit -m "Projekt-Update"
-git push -u origin main
-```
+*Tipp: In den GitHub Repository-Einstellungen unter "Pages" kannst du auch GitHub Actions nutzen, um diesen Prozess zu automatisieren.*
 
 ## 🛡️ Privacy First
 - **Keine Cloud-Speicherung:** Alle Vokabeln liegen im LocalStorage deines Browsers.
