@@ -288,10 +288,10 @@ export default function Dashboard() {
                     </div>
                   </CardContent>
                   <CardFooter className="pt-4 flex gap-2">
-                    <Link href={`/decks/${deck.id}`} className="flex-1">
+                    <Link href={`/deck?id=${deck.id}`} className="flex-1">
                       <Button variant="outline" className="w-full rounded-xl h-12 font-bold border-2">Öffnen</Button>
                     </Link>
-                    <Link href={`/decks/${deck.id}/study`}>
+                    <Link href={`/deck/study?id=${deck.id}`}>
                       <Button className="rounded-xl w-14 h-12 shadow-lg shadow-primary/20"><Play className="h-5 w-5 fill-current" /></Button>
                     </Link>
                   </CardFooter>
@@ -355,7 +355,7 @@ export default function Dashboard() {
                       </div>
                    </CardContent>
                    <CardFooter className="pt-4">
-                      <Link href={`/folders/${folder.id}`} className="w-full">
+                      <Link href={`/folder?id=${folder.id}`} className="w-full">
                         <Button className="w-full rounded-xl h-12 gap-2 font-bold shadow-lg shadow-primary/10">
                           Ordner ansehen <ArrowRight className="h-5 w-5" />
                         </Button>
